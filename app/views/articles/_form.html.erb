@@ -1,0 +1,21 @@
+<div class="row">
+  <div class="col-xs-6 col-md-3 col-md-offset-3">
+    <h2><%= @action %> article</h2>
+  </div>
+  <div class="col-xs-6 col-md-3 text-right">
+    <h2><%= link_to "Back to index", articles_path, class: "btn btn-primary" %></h2>
+  </div>
+  <div class="col-xs-12 col-md-6 col-md-offset-3">
+    <%= form_for(@article) do |f| %>
+      <div class="form-group">
+        <%= f.label :title, "Article title"%>
+        <%= f.text_field :title, placeholder: "My new article", class: "form-control" %>
+      </div>
+      <div class="form-group">
+        <%= f.label :content, "Article content" %>
+        <%= f.text_area :content, placeholder: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, deserunt excepturi corporis dolore cum atque fugit. Iusto velit quia consequuntur quos, magni deleniti aperiam ex incidunt, nemo nihil esse eius?", class: "form-control"   %>
+      </div>
+      <%= f.submit class: "btn btn-md btn-primary" %>
+    <% end %>
+  </div>
+</div>

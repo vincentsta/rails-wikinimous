@@ -5,3 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+(1..10).each do |el|
+  attr = {}
+  attr[:content] = Faker::Lorem.sentence(10, true)
+  attr[:title] = Faker::Book.title
+  Article.create(attr)
+end
+
+
